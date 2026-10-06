@@ -1,6 +1,12 @@
 {% extends 'base-crud.html' %}
-{% block title %}Novo Paciente{% endblock %}
+{% block title %}
+    Triagem realizada com sucesso
+    {% endblock %}
 {% block content %}
+    <script>
+        alert("Triagemde paciente realizada com sucesso!");
+        window.location.href = 
+    </script>
     <h1 class="mt-5">
         Cadastrar Novo Paciente
     </h1>
@@ -35,4 +41,14 @@
             </div>
         </div>
     </form>
+{% endblock %}
+{% block title %}Paciente Cadastrado{% endblock %}
+{% block content %}
+    <h1 class="mt-5">
+        Paciente Cadastrado com Sucesso!
+    </h1>
+    <hr>
+    <div class="d-flex justify-content-start mt-5 mb-5">
+        <a href="{% url 'novo-paciente' %}" class="btn btn-primary">Cadastrar Novo Paciente</a>
+    </div>
 {% endblock %}
